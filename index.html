@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+    }
+
+    button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Welcome!</h1>
+    <p>This is a sample <strong>index.html</strong> page.</p>
+    <button onclick="showMessage()">Click Me</button>
+  </div>
+
+  <script>
+    function showMessage() {
+      alert("Hello! Welcome to your sample webpage.");
+    }
+  </script>
+
+</body>
+</html>
