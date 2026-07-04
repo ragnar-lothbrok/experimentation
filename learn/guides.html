@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumen | Buying Guides</title>
+
+  <!-- Adobe Target: pre-hiding snippet (prevents content flicker). Must load before at.js. -->
+  <script>
+    ;(function (win, doc, style, timeout) {
+      var STYLE_ID = 'at-body-style';
+      function getParent() { return doc.getElementsByTagName('head')[0]; }
+      function addStyle(parent, id, def) {
+        if (!parent) { return; }
+        var s = doc.createElement('style');
+        s.id = id; s.innerHTML = def; parent.appendChild(s);
+      }
+      function removeStyle(parent, id) {
+        if (!parent) { return; }
+        var s = doc.getElementById(id);
+        if (!s) { return; }
+        parent.removeChild(s);
+      }
+      addStyle(getParent(), STYLE_ID, style);
+      setTimeout(function () { removeStyle(getParent(), STYLE_ID); }, timeout);
+    }(window, document, 'body {opacity: 0 !important}', 3000));
+  </script>
+
+  <script src="../js/target-settings.js"></script>
+  <script src="../js/target-params.js"></script>
+  <script src="../js/at.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-nav-root="../" data-nav-active="learn">
+
+  <div class="promo-banner exp-hidden" data-toggle="promo">
+    🎉 Free next-day shipping this week — code <strong>LUMEN24</strong> at checkout.
+    <button class="btn btn-sm" data-track-mbox="promo-click">Shop the sale</button>
+  </div>
+
+  <nav class="crumbs">
+    <a href="../index.html">Home</a><span>/</span><a href="index.html">Learn</a><span>/</span>Buying Guides
+  </nav>
+
+  <header class="hero hero-sub">
+    <h1>Buying guides</h1>
+    <p>Clear, jargon-free advice so you invest in the right gear.</p>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Camera buying guide</h2>
+    <p>
+      The best camera is the one that fits how you shoot. Start with sensor size:
+      full-frame excels in low light and shallow depth of field, while APS-C is
+      lighter and more affordable. Then weigh autofocus, video specs and lens choice.
+    </p>
+    <ul>
+      <li><strong>Travel &amp; everyday:</strong> compact APS-C bodies like the Lumen X100.</li>
+      <li><strong>Portraits &amp; weddings:</strong> full-frame such as the Lumen Z7.</li>
+      <li><strong>Video &amp; vlogging:</strong> flip-screen bodies like the Lumen Pocket.</li>
+    </ul>
+    <p><a class="btn btn-sm" href="../shop/cameras.html" data-track-mbox="guide-to-shop">Shop cameras</a></p>
+
+    <h2 class="section-title" style="margin-top:40px;">Lens buying guide</h2>
+    <p>
+      Lenses shape your images more than the body does. A fast prime (like a 50mm
+      f/1.4) gives beautiful background blur; a 24-70mm f/2.8 zoom covers most
+      situations in one lens. Match focal length to subject distance and style.
+    </p>
+    <div class="stats">
+      <div class="stat"><div class="num">35mm</div><div class="label">Street</div></div>
+      <div class="stat"><div class="num">50mm</div><div class="label">Portrait</div></div>
+      <div class="stat"><div class="num">24-70</div><div class="label">Everyday</div></div>
+      <div class="stat"><div class="num">70-200</div><div class="label">Sports</div></div>
+    </div>
+    <p style="margin-top:16px;"><a class="btn btn-sm" href="../shop/lenses.html" data-track-mbox="guide-to-shop">Shop lenses</a></p>
+
+    <h2 class="section-title" style="margin-top:40px;">Accessories checklist</h2>
+    <ul>
+      <li>Fast, reliable memory cards (and a spare).</li>
+      <li>A tripod for low light, landscapes and video.</li>
+      <li>ND filters for bright scenes and long exposures.</li>
+      <li>A comfortable bag that protects your kit.</li>
+    </ul>
+
+    <div class="notice" data-hide-if="variant=b">
+      <strong>Beginner recommendations.</strong> Hides when <code>?variant=b</code> is present.
+    </div>
+    <div class="notice notice-alt exp-hidden" data-show-if="variant=b">
+      <strong>Pro recommendations.</strong> Shown only with <code>?variant=b</code>.
+    </div>
+    <div class="notice" data-toggle="beta">
+      <span class="badge">BETA</span> Personalized kit finder preview. Hide with <code>?hide=beta</code>.
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="foot-inner">
+      <p><strong>Lumen</strong> &middot; Cameras, lenses &amp; creative gear.</p>
+      <p class="muted">Demo experimentation site &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/mboxes.js"></script>
+  <script src="../js/params.js"></script>
+</body>
+</html>

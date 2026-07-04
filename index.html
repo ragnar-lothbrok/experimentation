@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experimentation | Home</title>
+  <title>Lumen | Cameras, Lenses &amp; Creative Gear</title>
 
   <!-- Adobe Target: pre-hiding snippet (prevents content flicker). Must load before at.js. -->
   <script>
@@ -29,55 +29,54 @@
   <!-- Adobe Target: settings (Target-only, no Analytics). Must load before at.js. -->
   <script src="js/target-settings.js"></script>
 
+  <!-- Adobe Target: page-level params (property token). Must load before at.js. -->
+  <script src="js/target-params.js"></script>
+
   <!-- Adobe Target: at.js 2.x (self-hosted). Download from Target UI and place at js/at.js -->
   <script src="js/at.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-nav-root="" data-nav-active="home">
 
-  <nav class="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="brand">Experimentation</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="images.html">Images &amp; GIFs</a></li>
-        <li><a href="video.html">Video</a></li>
-        <li><a href="slider.html">Slider</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Experimentation: promo banner (reveal with ?show=promo) -->
+  <div class="promo-banner exp-hidden" data-toggle="promo">
+    🎉 Free next-day shipping this week — code <strong>LUMEN24</strong> at checkout.
+    <button class="btn btn-sm" data-track-mbox="promo-click">Shop the sale</button>
+  </div>
 
   <header class="hero">
-    <h1>Welcome to my Experimentation Site</h1>
-    <p>A playground of headings, images, GIFs, video and an interactive slider.</p>
-    <a href="images.html" class="btn" style="margin-top:18px;">Explore &rarr;</a>
+    <h1>Capture light. Tell better stories.</h1>
+    <p>Lumen is your studio for cameras, lenses and the craft behind great images and video.</p>
+    <a href="shop/index.html" class="btn" style="margin-top:18px;">Shop the gear &rarr;</a>
   </header>
 
   <main class="container">
-    <h2 class="section-title">What's inside</h2>
+    <h2 class="section-title">Explore the store</h2>
+    <p>Three focused areas — shop the gear, learn the craft, and see what it can do.</p>
     <div class="grid">
       <div class="card">
-        <img src="https://picsum.photos/id/1015/400/250" alt="Images preview">
+        <img src="https://picsum.photos/id/250/400/250" alt="Cameras and lenses">
         <div class="card-body">
-          <h3>Images &amp; GIFs</h3>
-          <p>A responsive gallery of photos and animated GIFs.</p>
+          <h3>Shop</h3>
+          <p>Mirrorless bodies, prime and zoom lenses, and studio-ready accessories.</p>
+          <p><a href="shop/index.html">Browse gear &rarr;</a></p>
         </div>
       </div>
       <div class="card">
-        <img src="https://picsum.photos/id/1043/400/250" alt="Video preview">
+        <img src="https://picsum.photos/id/24/400/250" alt="Learning resources">
         <div class="card-body">
-          <h3>Video</h3>
-          <p>HTML5 video and an embedded player.</p>
+          <h3>Learn</h3>
+          <p>Buying guides and step-by-step tutorials for every skill level.</p>
+          <p><a href="learn/index.html">Start learning &rarr;</a></p>
         </div>
       </div>
       <div class="card">
-        <img src="https://picsum.photos/id/1025/400/250" alt="Slider preview">
+        <img src="https://picsum.photos/id/1039/400/250" alt="Showcase gallery">
         <div class="card-body">
-          <h3>Slider</h3>
-          <p>An auto-playing image carousel with controls.</p>
+          <h3>Showcase</h3>
+          <p>A gallery, video reel and interactive slider shot on Lumen gear.</p>
+          <p><a href="showcase/index.html">See the work &rarr;</a></p>
         </div>
       </div>
     </div>
@@ -87,28 +86,66 @@
     <div class="grid">
       <div class="card">
         <div id="mbox-home-hero" class="card-body">
-          <h3>Default hero message</h3>
-          <p>Controlled by the <code>home-hero</code> mbox.</p>
+          <h3>Welcome back</h3>
+          <p>Default hero message, controlled by the <code>home-hero</code> mbox.</p>
         </div>
       </div>
       <div class="card">
         <div id="mbox-home-promo" class="card-body">
-          <h3>Default promo</h3>
-          <p>Controlled by the <code>home-promo</code> mbox.</p>
+          <h3>Member pricing</h3>
+          <p>Default promo, controlled by the <code>home-promo</code> mbox.</p>
         </div>
       </div>
     </div>
 
     <p style="margin-top:24px;">
-      <button class="btn" id="home-cta" data-track-mbox="home-conversion">Complete demo conversion</button>
+      <button class="btn" id="home-cta" data-track-mbox="home-conversion">Create free account</button>
     </p>
+
+    <h2 class="section-title" style="margin-top:40px;">Why photographers choose Lumen</h2>
+    <div class="stats">
+      <div class="stat"><div class="num">120+</div><div class="label">Products</div></div>
+      <div class="stat"><div class="num">4.8&#9733;</div><div class="label">Avg. rating</div></div>
+      <div class="stat"><div class="num">30-day</div><div class="label">Returns</div></div>
+      <div class="stat"><div class="num">2-yr</div><div class="label">Warranty</div></div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">What customers say</h2>
+    <div class="grid">
+      <div class="card"><div class="card-body"><p>"The lens I bought transformed my portrait work overnight."</p><h3>&mdash; Alex, Portrait photographer</h3></div></div>
+      <div class="card"><div class="card-body"><p>"Fast shipping and the buying guide picked the right body for me."</p><h3>&mdash; Priya, Content creator</h3></div></div>
+      <div class="card"><div class="card-body"><p>"Best prices I found, and the tutorials are genuinely useful."</p><h3>&mdash; Sam, Filmmaker</h3></div></div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Segment / query-parameter preview</h2>
+    <p>
+      Content below switches from the URL, so you can preview audience experiences
+      without an activity: <code>?variant=b</code>, <code>?show=promo</code>, or <code>?hide=beta</code>.
+    </p>
+    <div class="notice" data-hide-if="variant=b">
+      <strong>Default (Variant A).</strong> Standard homepage messaging. Hides when
+      <code>?variant=b</code> is in the URL.
+    </div>
+    <div class="notice notice-alt exp-hidden" data-show-if="variant=b">
+      <strong>Variant B.</strong> Alternate messaging for a test audience — appears only
+      with <code>?variant=b</code>.
+    </div>
+    <div class="notice" data-toggle="beta">
+      <span class="badge">BETA</span> Trade-in program preview. Hide it with
+      <code>?hide=beta</code> to simulate a disabled feature flag.
+    </div>
   </main>
 
   <footer class="footer">
-    <p>Built as an experimentation project &middot; Hosted on GitHub Pages</p>
+    <div class="foot-inner">
+      <p><strong>Lumen</strong> &middot; Cameras, lenses &amp; creative gear.</p>
+      <p class="muted">Demo experimentation site &middot; Hosted on GitHub Pages</p>
+    </div>
   </footer>
 
+  <script src="js/nav.js"></script>
   <script src="js/main.js"></script>
   <script src="js/mboxes.js"></script>
+  <script src="js/params.js"></script>
 </body>
 </html>

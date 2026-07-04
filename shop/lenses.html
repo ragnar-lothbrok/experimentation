@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumen | Lenses</title>
+
+  <!-- Adobe Target: pre-hiding snippet (prevents content flicker). Must load before at.js. -->
+  <script>
+    ;(function (win, doc, style, timeout) {
+      var STYLE_ID = 'at-body-style';
+      function getParent() { return doc.getElementsByTagName('head')[0]; }
+      function addStyle(parent, id, def) {
+        if (!parent) { return; }
+        var s = doc.createElement('style');
+        s.id = id; s.innerHTML = def; parent.appendChild(s);
+      }
+      function removeStyle(parent, id) {
+        if (!parent) { return; }
+        var s = doc.getElementById(id);
+        if (!s) { return; }
+        parent.removeChild(s);
+      }
+      addStyle(getParent(), STYLE_ID, style);
+      setTimeout(function () { removeStyle(getParent(), STYLE_ID); }, timeout);
+    }(window, document, 'body {opacity: 0 !important}', 3000));
+  </script>
+
+  <script src="../js/target-settings.js"></script>
+  <script src="../js/target-params.js"></script>
+  <script src="../js/at.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-nav-root="../" data-nav-active="shop">
+
+  <div class="promo-banner exp-hidden" data-toggle="promo">
+    🎉 Free next-day shipping this week — code <strong>LUMEN24</strong> at checkout.
+    <button class="btn btn-sm" data-track-mbox="promo-click">Shop the sale</button>
+  </div>
+
+  <nav class="crumbs">
+    <a href="../index.html">Home</a><span>/</span><a href="index.html">Shop</a><span>/</span>Lenses
+  </nav>
+
+  <header class="hero hero-sub">
+    <h1>Lenses</h1>
+    <p>Primes for character, zooms for reach — glass for every focal length.</p>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">All lenses</h2>
+    <div class="product-grid">
+      <div class="card product">
+        <img src="https://picsum.photos/id/1074/400/250" alt="35mm prime lens">
+        <div class="card-body">
+          <h3>Lumen 35mm f/1.8</h3>
+          <div class="tag-row"><span class="tag">Prime</span><span class="tag">f/1.8</span><span class="tag">Street</span></div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</div>
+          <div class="price">$399</div>
+          <button class="btn btn-sm" data-track-mbox="cart-add">Add to cart</button>
+        </div>
+      </div>
+      <div class="card product">
+        <img src="https://picsum.photos/id/1080/400/250" alt="50mm prime lens">
+        <div class="card-body">
+          <h3>Lumen 50mm f/1.4</h3>
+          <div class="tag-row"><span class="tag">Prime</span><span class="tag">f/1.4</span><span class="tag">Portrait</span></div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</div>
+          <div class="price">$629 <span class="was">$699</span></div>
+          <button class="btn btn-sm" data-track-mbox="cart-add">Add to cart</button>
+        </div>
+      </div>
+      <div class="card product">
+        <img src="https://picsum.photos/id/1050/400/250" alt="24-70mm zoom lens">
+        <div class="card-body">
+          <h3>Lumen 24-70mm f/2.8</h3>
+          <div class="tag-row"><span class="tag">Zoom</span><span class="tag">f/2.8</span><span class="tag">Everyday</span></div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.7</div>
+          <div class="price">$1,199</div>
+          <button class="btn btn-sm" data-track-mbox="cart-add">Add to cart</button>
+        </div>
+      </div>
+      <div class="card product">
+        <img src="https://picsum.photos/id/1015/400/250" alt="70-200mm telephoto lens">
+        <div class="card-body">
+          <h3>Lumen 70-200mm f/4</h3>
+          <div class="tag-row"><span class="tag">Telephoto</span><span class="tag">f/4</span><span class="tag">Sports</span></div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.6</div>
+          <div class="price">$1,049</div>
+          <button class="btn btn-sm" data-track-mbox="cart-add">Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Which mount do I need?</h2>
+    <p>
+      Every Lumen lens lists its mount and focal length. New to the system? The
+      <a href="../learn/guides.html">lens buying guide</a> explains primes vs zooms
+      and how aperture affects your images.
+    </p>
+
+    <div class="notice" data-hide-if="variant=b">
+      <strong>Standard sort.</strong> Hides when <code>?variant=b</code> is present.
+    </div>
+    <div class="notice notice-alt exp-hidden" data-show-if="variant=b">
+      <strong>Best-sellers first.</strong> Shown only with <code>?variant=b</code>.
+    </div>
+    <div class="notice" data-toggle="beta">
+      <span class="badge">BETA</span> Rental option preview. Hide with <code>?hide=beta</code>.
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="foot-inner">
+      <p><strong>Lumen</strong> &middot; Cameras, lenses &amp; creative gear.</p>
+      <p class="muted">Demo experimentation site &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/mboxes.js"></script>
+  <script src="../js/params.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumen | Showcase</title>
+
+  <!-- Adobe Target: pre-hiding snippet (prevents content flicker). Must load before at.js. -->
+  <script>
+    ;(function (win, doc, style, timeout) {
+      var STYLE_ID = 'at-body-style';
+      function getParent() { return doc.getElementsByTagName('head')[0]; }
+      function addStyle(parent, id, def) {
+        if (!parent) { return; }
+        var s = doc.createElement('style');
+        s.id = id; s.innerHTML = def; parent.appendChild(s);
+      }
+      function removeStyle(parent, id) {
+        if (!parent) { return; }
+        var s = doc.getElementById(id);
+        if (!s) { return; }
+        parent.removeChild(s);
+      }
+      addStyle(getParent(), STYLE_ID, style);
+      setTimeout(function () { removeStyle(getParent(), STYLE_ID); }, timeout);
+    }(window, document, 'body {opacity: 0 !important}', 3000));
+  </script>
+
+  <script src="../js/target-settings.js"></script>
+  <script src="../js/target-params.js"></script>
+  <script src="../js/at.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-nav-root="../" data-nav-active="showcase">
+
+  <div class="promo-banner exp-hidden" data-toggle="promo">
+    🎉 Free next-day shipping this week — code <strong>LUMEN24</strong> at checkout.
+    <button class="btn btn-sm" data-track-mbox="promo-click">Shop the sale</button>
+  </div>
+
+  <nav class="crumbs">
+    <a href="../index.html">Home</a><span>/</span>Showcase
+  </nav>
+
+  <header class="hero hero-sub">
+    <h1>Showcase</h1>
+    <p>See what Lumen gear can do — a gallery, a video reel and an interactive slider.</p>
+  </header>
+
+  <main class="container">
+    <div id="mbox-showcase-hero" class="notice">
+      <strong>Shot on Lumen.</strong> Default intro, controlled by the
+      <code>showcase-hero</code> mbox.
+    </div>
+
+    <h2 class="section-title" style="margin-top:24px;">Explore the work</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1039/400/250" alt="Photo gallery">
+        <div class="card-body">
+          <h3>Gallery</h3>
+          <p>Responsive photo and GIF gallery with a filterable featured image.</p>
+          <p><a href="gallery.html">Open gallery &rarr;</a></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1043/400/250" alt="Video reel">
+        <div class="card-body">
+          <h3>Video</h3>
+          <p>HTML5 and embedded players with a subscribe call to action.</p>
+          <p><a href="video.html">Watch the reel &rarr;</a></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1025/400/250" alt="Image slider">
+        <div class="card-body">
+          <h3>Slider</h3>
+          <p>An auto-playing carousel with controls and navigation dots.</p>
+          <p><a href="slider.html">View the slider &rarr;</a></p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Segment / query-parameter preview</h2>
+    <p>Preview an audience experience: <code>?variant=b</code>, <code>?show=promo</code>, or <code>?hide=beta</code>.</p>
+    <div class="notice" data-hide-if="variant=b">
+      <strong>Photography-first.</strong> Hides when <code>?variant=b</code> is present.
+    </div>
+    <div class="notice notice-alt exp-hidden" data-show-if="variant=b">
+      <strong>Video-first.</strong> Shown only with <code>?variant=b</code>.
+    </div>
+    <div class="notice" data-toggle="beta">
+      <span class="badge">BETA</span> Client portfolio preview. Hide with <code>?hide=beta</code>.
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="foot-inner">
+      <p><strong>Lumen</strong> &middot; Cameras, lenses &amp; creative gear.</p>
+      <p class="muted">Demo experimentation site &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/mboxes.js"></script>
+  <script src="../js/params.js"></script>
+</body>
+</html>

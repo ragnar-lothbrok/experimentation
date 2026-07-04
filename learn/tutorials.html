@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumen | Tutorials</title>
+
+  <!-- Adobe Target: pre-hiding snippet (prevents content flicker). Must load before at.js. -->
+  <script>
+    ;(function (win, doc, style, timeout) {
+      var STYLE_ID = 'at-body-style';
+      function getParent() { return doc.getElementsByTagName('head')[0]; }
+      function addStyle(parent, id, def) {
+        if (!parent) { return; }
+        var s = doc.createElement('style');
+        s.id = id; s.innerHTML = def; parent.appendChild(s);
+      }
+      function removeStyle(parent, id) {
+        if (!parent) { return; }
+        var s = doc.getElementById(id);
+        if (!s) { return; }
+        parent.removeChild(s);
+      }
+      addStyle(getParent(), STYLE_ID, style);
+      setTimeout(function () { removeStyle(getParent(), STYLE_ID); }, timeout);
+    }(window, document, 'body {opacity: 0 !important}', 3000));
+  </script>
+
+  <script src="../js/target-settings.js"></script>
+  <script src="../js/target-params.js"></script>
+  <script src="../js/at.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-nav-root="../" data-nav-active="learn">
+
+  <div class="promo-banner exp-hidden" data-toggle="promo">
+    🎉 Free next-day shipping this week — code <strong>LUMEN24</strong> at checkout.
+    <button class="btn btn-sm" data-track-mbox="promo-click">Shop the sale</button>
+  </div>
+
+  <nav class="crumbs">
+    <a href="../index.html">Home</a><span>/</span><a href="index.html">Learn</a><span>/</span>Tutorials
+  </nav>
+
+  <header class="hero hero-sub">
+    <h1>Tutorials</h1>
+    <p>Short, practical lessons you can apply on your next shoot.</p>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Fundamentals</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1062/400/250" alt="Exposure triangle">
+        <div class="card-body">
+          <h3>The exposure triangle</h3>
+          <p>Balance aperture, shutter speed and ISO for a clean exposure.</p>
+          <p><span class="tag">Beginner</span> <span class="tag">8 min</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1059/400/250" alt="Composition rules">
+        <div class="card-body">
+          <h3>Composition basics</h3>
+          <p>Rule of thirds, leading lines and framing that guides the eye.</p>
+          <p><span class="tag">Beginner</span> <span class="tag">10 min</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1035/400/250" alt="Focus techniques">
+        <div class="card-body">
+          <h3>Nailing focus</h3>
+          <p>Single vs continuous AF, focus points and back-button focus.</p>
+          <p><span class="tag">Intermediate</span> <span class="tag">12 min</span></p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Editing</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1037/400/250" alt="Color grading">
+        <div class="card-body">
+          <h3>Color grading essentials</h3>
+          <p>White balance, tone curves and building a consistent look.</p>
+          <p><span class="tag">Intermediate</span> <span class="tag">15 min</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1040/400/250" alt="Retouching">
+        <div class="card-body">
+          <h3>Portrait retouching</h3>
+          <p>Subtle skin work that keeps texture and looks natural.</p>
+          <p><span class="tag">Advanced</span> <span class="tag">18 min</span></p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Ready to practice?</h2>
+    <p>
+      Pick a body and lens from the <a href="../shop/index.html">shop</a>, then work
+      through a tutorial with your own gear.
+    </p>
+    <p><button class="btn" data-track-mbox="tutorial-start">Start the first lesson</button></p>
+
+    <div class="notice" data-hide-if="variant=b">
+      <strong>Video-first order.</strong> Hides when <code>?variant=b</code> is present.
+    </div>
+    <div class="notice notice-alt exp-hidden" data-show-if="variant=b">
+      <strong>Editing-first order.</strong> Shown only with <code>?variant=b</code>.
+    </div>
+    <div class="notice" data-toggle="beta">
+      <span class="badge">BETA</span> Progress tracking preview. Hide with <code>?hide=beta</code>.
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="foot-inner">
+      <p><strong>Lumen</strong> &middot; Cameras, lenses &amp; creative gear.</p>
+      <p class="muted">Demo experimentation site &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/mboxes.js"></script>
+  <script src="../js/params.js"></script>
+</body>
+</html>

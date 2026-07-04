@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumen | Gallery</title>
+
+  <!-- Adobe Target: pre-hiding snippet (prevents content flicker). Must load before at.js. -->
+  <script>
+    ;(function (win, doc, style, timeout) {
+      var STYLE_ID = 'at-body-style';
+      function getParent() { return doc.getElementsByTagName('head')[0]; }
+      function addStyle(parent, id, def) {
+        if (!parent) { return; }
+        var s = doc.createElement('style');
+        s.id = id; s.innerHTML = def; parent.appendChild(s);
+      }
+      function removeStyle(parent, id) {
+        if (!parent) { return; }
+        var s = doc.getElementById(id);
+        if (!s) { return; }
+        parent.removeChild(s);
+      }
+      addStyle(getParent(), STYLE_ID, style);
+      setTimeout(function () { removeStyle(getParent(), STYLE_ID); }, timeout);
+    }(window, document, 'body {opacity: 0 !important}', 3000));
+  </script>
+
+  <script src="../js/target-settings.js"></script>
+  <script src="../js/target-params.js"></script>
+  <script src="../js/at.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-nav-root="../" data-nav-active="showcase">
+
+  <div class="promo-banner exp-hidden" data-toggle="promo">
+    🎉 Free next-day shipping this week — code <strong>LUMEN24</strong> at checkout.
+    <button class="btn btn-sm" data-track-mbox="promo-click">Shop the sale</button>
+  </div>
+
+  <nav class="crumbs">
+    <a href="../index.html">Home</a><span>/</span><a href="index.html">Showcase</a><span>/</span>Gallery
+  </nav>
+
+  <header class="hero hero-sub">
+    <h1>Gallery</h1>
+    <p>Photos and animated GIFs captured on Lumen cameras and lenses.</p>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Image gallery</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1018/400/300" alt="Mountains">
+        <div class="card-body"><h3>Mountains</h3><p>Shot on the Lumen Z7.</p></div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1039/400/300" alt="Waterfall">
+        <div class="card-body"><h3>Waterfall</h3><p>Shot on the Lumen X100.</p></div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1041/400/300" alt="Coast">
+        <div class="card-body"><h3>Coast</h3><p>Lumen 24-70mm f/2.8.</p></div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1069/400/300" alt="City">
+        <div class="card-body"><h3>City</h3><p>Lumen 35mm f/1.8.</p></div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Animated GIFs</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif" alt="Rotating Earth">
+        <div class="card-body"><h3>Rotating Earth</h3><p>Animated GIF (Wikimedia Commons).</p></div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Animhorse.gif" alt="Galloping horse">
+        <div class="card-body"><h3>Galloping Horse</h3><p>Animated GIF (Wikimedia Commons).</p></div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Recommended for you (Adobe Target mbox)</h2>
+    <div class="card">
+      <div id="mbox-images-reco" class="card-body">
+        <h3>Default recommendations</h3>
+        <p>Controlled by the <code>images-reco</code> mbox.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Featured image</h2>
+    <p>Filter the featured creative below. Each button reports a click to Target.</p>
+    <div class="filters">
+      <button class="btn btn-sm" data-track-mbox="filter-nature">Nature</button>
+      <button class="btn btn-sm btn-outline" data-track-mbox="filter-city">City</button>
+      <button class="btn btn-sm btn-outline" data-track-mbox="filter-abstract">Abstract</button>
+    </div>
+    <div class="media-frame">
+      <img id="featured-image" src="https://picsum.photos/id/1024/1000/420" alt="Featured shot">
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Segment / query-parameter preview</h2>
+    <p>Preview an audience experience: <code>?variant=b</code>, <code>?show=promo</code>, or <code>?hide=beta</code>.</p>
+    <div class="notice" data-hide-if="variant=b">
+      <strong>Grid layout.</strong> Hides when <code>?variant=b</code> is present.
+    </div>
+    <div class="notice notice-alt exp-hidden" data-show-if="variant=b">
+      <strong>Masonry layout.</strong> Shown only with <code>?variant=b</code>.
+    </div>
+    <div class="notice" data-toggle="beta">
+      <span class="badge">BETA</span> Lightbox preview. Hide with <code>?hide=beta</code>.
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="foot-inner">
+      <p><strong>Lumen</strong> &middot; Cameras, lenses &amp; creative gear.</p>
+      <p class="muted">Demo experimentation site &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/mboxes.js"></script>
+  <script src="../js/params.js"></script>
+</body>
+</html>

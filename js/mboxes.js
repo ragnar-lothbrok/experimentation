@@ -8,7 +8,10 @@
     { mbox: 'home-promo', selector: '#mbox-home-promo' },
     { mbox: 'images-reco', selector: '#mbox-images-reco' },
     { mbox: 'video-cta', selector: '#mbox-video-cta' },
-    { mbox: 'slider-cta', selector: '#mbox-slider-cta' }
+    { mbox: 'slider-cta', selector: '#mbox-slider-cta' },
+    { mbox: 'shop-hero', selector: '#mbox-shop-hero' },
+    { mbox: 'learn-hero', selector: '#mbox-learn-hero' },
+    { mbox: 'showcase-hero', selector: '#mbox-showcase-hero' }
   ];
 
   function requestMbox(cfg) {

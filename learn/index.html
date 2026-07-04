@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumen | Learn</title>
+
+  <!-- Adobe Target: pre-hiding snippet (prevents content flicker). Must load before at.js. -->
+  <script>
+    ;(function (win, doc, style, timeout) {
+      var STYLE_ID = 'at-body-style';
+      function getParent() { return doc.getElementsByTagName('head')[0]; }
+      function addStyle(parent, id, def) {
+        if (!parent) { return; }
+        var s = doc.createElement('style');
+        s.id = id; s.innerHTML = def; parent.appendChild(s);
+      }
+      function removeStyle(parent, id) {
+        if (!parent) { return; }
+        var s = doc.getElementById(id);
+        if (!s) { return; }
+        parent.removeChild(s);
+      }
+      addStyle(getParent(), STYLE_ID, style);
+      setTimeout(function () { removeStyle(getParent(), STYLE_ID); }, timeout);
+    }(window, document, 'body {opacity: 0 !important}', 3000));
+  </script>
+
+  <script src="../js/target-settings.js"></script>
+  <script src="../js/target-params.js"></script>
+  <script src="../js/at.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-nav-root="../" data-nav-active="learn">
+
+  <div class="promo-banner exp-hidden" data-toggle="promo">
+    🎉 Free next-day shipping this week — code <strong>LUMEN24</strong> at checkout.
+    <button class="btn btn-sm" data-track-mbox="promo-click">Shop the sale</button>
+  </div>
+
+  <nav class="crumbs">
+    <a href="../index.html">Home</a><span>/</span>Learn
+  </nav>
+
+  <header class="hero hero-sub">
+    <h1>Learn the craft</h1>
+    <p>Guides to help you buy well, and tutorials to help you shoot better.</p>
+  </header>
+
+  <main class="container">
+    <div id="mbox-learn-hero" class="notice notice-alt">
+      <strong>New here?</strong> Default welcome, controlled by the <code>learn-hero</code>
+      mbox — personalize it for first-time vs returning visitors.
+    </div>
+
+    <h2 class="section-title" style="margin-top:24px;">Start here</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/24/400/250" alt="Buying guides">
+        <div class="card-body">
+          <h3>Buying guides</h3>
+          <p>Choose the right camera and lens with plain-language comparisons.</p>
+          <p><a href="guides.html">Read the guides &rarr;</a></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/48/400/250" alt="Tutorials">
+        <div class="card-body">
+          <h3>Tutorials</h3>
+          <p>Step-by-step lessons on exposure, composition and editing.</p>
+          <p><a href="tutorials.html">Start a tutorial &rarr;</a></p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Popular topics</h2>
+    <div class="faq">
+      <details><summary>What is the exposure triangle?</summary><p>Aperture, shutter speed and ISO together control brightness and look. Our tutorials break each one down with examples.</p></details>
+      <details><summary>Prime or zoom lens?</summary><p>Primes are lighter and sharper wide open; zooms are more flexible. The lens guide helps you decide.</p></details>
+      <details><summary>Full-frame or APS-C?</summary><p>Full-frame gathers more light and blurs backgrounds more easily; APS-C is smaller and cheaper. The camera guide compares both.</p></details>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px;">Get the newsletter</h2>
+    <p>Monthly tips, gear deals and new tutorials — no spam.</p>
+    <p><button class="btn" data-track-mbox="newsletter-signup">Subscribe</button></p>
+
+    <h2 class="section-title" style="margin-top:40px;">Segment / query-parameter preview</h2>
+    <p>Preview an audience experience: <code>?variant=b</code>, <code>?show=promo</code>, or <code>?hide=beta</code>.</p>
+    <div class="notice" data-hide-if="variant=b">
+      <strong>Beginner path.</strong> Hides when <code>?variant=b</code> is present.
+    </div>
+    <div class="notice notice-alt exp-hidden" data-show-if="variant=b">
+      <strong>Advanced path.</strong> Shown only with <code>?variant=b</code>.
+    </div>
+    <div class="notice" data-toggle="beta">
+      <span class="badge">BETA</span> Live workshops preview. Hide with <code>?hide=beta</code>.
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="foot-inner">
+      <p><strong>Lumen</strong> &middot; Cameras, lenses &amp; creative gear.</p>
+      <p class="muted">Demo experimentation site &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/mboxes.js"></script>
+  <script src="../js/params.js"></script>
+</body>
+</html>
