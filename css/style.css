@@ -217,3 +217,82 @@ video, iframe { display: block; width: 100%; border: none; }
   .nav-toggle { display: block; }
   .slides img { height: 260px; }
 }
+
+/* Experimentation utilities */
+.exp-hidden { display: none !important; }
+
+.promo-banner {
+  background: #ffca28;
+  color: #4a3b00;
+  text-align: center;
+  padding: 12px 16px;
+  font-weight: bold;
+}
+
+.btn-sm { padding: 6px 14px; font-size: 0.85rem; }
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+.btn-outline:hover { background: var(--primary); color: #fff; }
+
+.notice {
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin: 12px 0;
+  background: #e7f1ff;
+  border-left: 5px solid var(--primary);
+}
+.notice-alt { background: #e9f9ee; border-left-color: #28a745; }
+
+.badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  text-align: center;
+}
+.stat {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.stat .num { font-size: 2rem; font-weight: bold; color: var(--primary); }
+.stat .label { color: var(--muted); font-size: 0.9rem; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+
+.playlist { list-style: none; padding: 0; margin: 0; }
+.playlist li {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq details {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+.faq summary { cursor: pointer; font-weight: bold; }
+
+.thumbs { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.thumbs img { width: 80px; height: 54px; object-fit: cover; border-radius: 6px; cursor: pointer; }
