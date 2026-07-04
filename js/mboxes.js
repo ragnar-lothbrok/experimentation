@@ -14,19 +14,35 @@
     { mbox: 'showcase-hero', selector: '#mbox-showcase-hero' }
   ];
 
+  function log() {
+    if (window.console && console.log) {
+      console.log.apply(console, ['[Target]'].concat([].slice.call(arguments)));
+    }
+  }
+
   function requestMbox(cfg) {
     var el = document.querySelector(cfg.selector);
     if (!el) { return; } // location not present on this page
 
+    log('getOffer request -> mbox "' + cfg.mbox + '" (' + cfg.selector + ')');
     adobe.target.getOffer({
       mbox: cfg.mbox,
       params: { page: window.location.pathname },
       success: function (offer) {
-        adobe.target.applyOffer({
-          mbox: cfg.mbox,
-          selector: cfg.selector,
-          offer: offer
-        });
+        // offer is an array of actions. An empty array = no experience delivered
+        // to this mbox (property/audience/activation mismatch), so default stays.
+        var count = (offer && offer.length) || 0;
+        log('getOffer success -> "' + cfg.mbox + '": ' + count + ' action(s)', offer);
+        if (!count) {
+          log('No offer for "' + cfg.mbox + '" - default content kept. Check property/audience/activation.');
+          return;
+        }
+        try {
+          adobe.target.applyOffer({ mbox: cfg.mbox, selector: cfg.selector, offer: offer });
+          log('applyOffer done -> "' + cfg.mbox + '"');
+        } catch (e) {
+          if (window.console) { console.error('[Target] applyOffer error "' + cfg.mbox + '"', e); }
+        }
       },
       error: function (status, error) {
         if (window.console) {
