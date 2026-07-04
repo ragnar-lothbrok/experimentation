@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experimentation | Home</title>
+  <title>Experimentation | Slider</title>
 
   <!-- Adobe Target: pre-hiding snippet (prevents content flicker). Must load before at.js. -->
   <script>
@@ -41,46 +41,30 @@
       <a href="index.html" class="brand">Experimentation</a>
       <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="images.html">Images &amp; GIFs</a></li>
         <li><a href="video.html">Video</a></li>
-        <li><a href="slider.html">Slider</a></li>
+        <li><a href="slider.html" class="active">Slider</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </div>
   </nav>
 
-  <header class="hero">
-    <h1>Welcome to my Experimentation Site</h1>
-    <p>A playground of headings, images, GIFs, video and an interactive slider.</p>
-    <a href="images.html" class="btn" style="margin-top:18px;">Explore &rarr;</a>
-  </header>
-
   <main class="container">
-    <h2 class="section-title">What's inside</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://picsum.photos/id/1015/400/250" alt="Images preview">
-        <div class="card-body">
-          <h3>Images &amp; GIFs</h3>
-          <p>A responsive gallery of photos and animated GIFs.</p>
-        </div>
+    <h1>Image Slider</h1>
+    <p>An auto-playing carousel with previous/next controls and clickable dots.</p>
+
+    <div class="slider">
+      <div class="slides">
+        <img src="https://picsum.photos/id/1015/800/420" alt="Slide 1">
+        <img src="https://picsum.photos/id/1016/800/420" alt="Slide 2">
+        <img src="https://picsum.photos/id/1018/800/420" alt="Slide 3">
+        <img src="https://picsum.photos/id/1019/800/420" alt="Slide 4">
       </div>
-      <div class="card">
-        <img src="https://picsum.photos/id/1043/400/250" alt="Video preview">
-        <div class="card-body">
-          <h3>Video</h3>
-          <p>HTML5 video and an embedded player.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://picsum.photos/id/1025/400/250" alt="Slider preview">
-        <div class="card-body">
-          <h3>Slider</h3>
-          <p>An auto-playing image carousel with controls.</p>
-        </div>
-      </div>
+      <button class="slider-btn prev" aria-label="Previous slide">&#10094;</button>
+      <button class="slider-btn next" aria-label="Next slide">&#10095;</button>
     </div>
+    <div class="dots"></div>
   </main>
 
   <footer class="footer">
